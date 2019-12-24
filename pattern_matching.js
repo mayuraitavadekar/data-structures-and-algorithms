@@ -13,8 +13,6 @@ var search_token = search_pattern.split('');
 
 console.log(search_token);
 
-var flag = false;
-
 // search_token = j; main_token = i;
 
 var i=0,j=0,count=0;
