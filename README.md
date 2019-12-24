@@ -17,7 +17,7 @@ node file_name.js #to run any file in the folder.
 
 The JavaScript is very light weight, high level, general purpose programming language. It is multi paradigm language, that is, we can use JavaScript in functional, procedural and/or Object Oriented way. 
 
-Though it is not recommended to write data structures programs using JavaScript, I have written this programs for my personal understanding and deeper clarity about 1) Programming in Js 2) Developing data structures.
+Though it is not recommended to write data structures programs using JavaScript, I have written these programs for my personal understanding and deeper clarity about 1) Programming in Js 2) Developing data structures.
 
 I am regularly updating this repository. The 'readline-sync' is external npm module used to take user input. 'process' module is used sometimes where it is needed to print output.
 It contains following data structures:
