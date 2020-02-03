@@ -31,13 +31,17 @@ class linked_list_stack {
     }
 
     pop() {
+   
         if(this.head===null) {
             console.log("stack underflow!!");
+            return;    
         }
+        
         this.head = this.head.next;  // just decremented head
     }
 
     display() {
+        
         var temp = this.head;
         if(this.head===null) {
             console.log("stack underflow!!");
