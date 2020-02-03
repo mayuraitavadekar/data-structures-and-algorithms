@@ -1,7 +1,6 @@
 # Data Structures & Algorithms using JavaScript/C++
 
-This repository contains computer programs related to data structures and algorithms written JavaScript/Node.js.
-Also recently some C++ codes are developed by Nikhil Karve. 
+This repository contains computer programs related to data structures and algorithms written JavaScript/Node.js/C++.
 
 ## Installation
 
