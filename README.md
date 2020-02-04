@@ -27,7 +27,7 @@ It contains following data structures:
 5. Some Sorting Algorithms
 6. Pattern Matching
 
-## recent update
+## Recent Updates
 
 Recently some C++ codes are uploaded by Nikhil Karve.
 
