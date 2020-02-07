@@ -4,6 +4,7 @@ This repository contains computer programs related to data structures and algori
 
 ## Installation
 
+### Nodejs
 1. Just Install Node.js in your computer. [Click Here](https://nodejs.org/en/download/) to install Node.js.
 2. Clone/download folder. Open terminal and move into cloned folder.
 
@@ -11,6 +12,16 @@ This repository contains computer programs related to data structures and algori
 cd data_structures
 node file_name.js #to run any file in the folder.
 ```
+### Java and C++
+
+In case of Java check if JDK is installed on your machine. 
+```
+java --version
+```
+If not, install. 
+
+Also Check g++ compiler is installed on your machine or not. It's inbuilt in linux/mac machines. 
+
 
 ## About This Repository
 
@@ -29,6 +40,6 @@ It contains following data structures:
 
 ## Recent Updates
 
-Recently some C++ codes are uploaded by Nikhil Karve.
+Recently some C++ codes are uploaded by Nikhil Karve & I'm uploading Java programs.
 
 ## Happy Coding 😊
