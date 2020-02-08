@@ -1,4 +1,4 @@
-# Data Structures & Algorithms using JavaScript/C++
+# Data Structures & Algorithms using JavaScript/C++/Java
 
 This repository contains computer programs related to data structures and algorithms written JavaScript/Node.js/C++.
 
@@ -40,7 +40,7 @@ It contains following data structures:
 
 ## Recent Updates
 
-C++ codes are uploaded by Nikhil Karve -> Jan 2020
-Java Codes are uploaded by me -> Feb 2020
+C++ codes are uploaded by Nikhil Karve.
+Java codes are uploaded by me.
 
 ## Happy Coding 😊
