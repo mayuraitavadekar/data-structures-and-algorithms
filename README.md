@@ -40,7 +40,6 @@ It contains following data structures:
 
 ## Recent Updates
 
-C++ codes are uploaded by Nikhil Karve.
-Java codes are uploaded by me.
+We started uploading C++,Java and JavaScript codes, regularly.  
 
 ## Happy Coding 😊
