@@ -7,7 +7,6 @@ typedef struct Node {
     Node *next;
 } Node;
 
-Node *top = NULL;
 Node *head = NULL;
 Node *newnode = NULL;
 
