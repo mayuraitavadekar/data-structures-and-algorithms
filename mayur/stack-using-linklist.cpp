@@ -13,32 +13,32 @@ Node *newnode = NULL;
 void push() {
 
     int element;
-    
+
     cout<<"enter element : "<<endl;
     cin>>element;
     
-    if(head==NULL) {
-        // create newnode
-        newnode = new Node();
-        newnode->next = NULL;
-        newnode->data = element;
-        head = newnode;
+    // creating node
+    newnode = new Node();
+
+    if(!newnode) {
+        cout<<"the stack is full"<<endl;
+        exit(0);
     }
 
     else {
-
-        // create newnode
-        newnode = new Node();
-        newnode->next = NULL;
-        newnode->data = element;
-
-        newnode->next = head;
-        head = newnode;
         
+        if(head==NULL) {
+            newnode->data = element;
+            head = newnode;
+        }
+
+        else {
+            newnode->data = element;
+            newnode->next = head;
+            head = newnode;   
+        }
+        cout<<"pushed."<<endl;
     }
-
-    cout<<"pushed."<<endl;
-
 }
 
 int pop() {
