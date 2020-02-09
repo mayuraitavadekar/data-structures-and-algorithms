@@ -6,7 +6,7 @@ class stack {
 
     private : 
     int size;
-    int arr[100];
+    int *arr = new int[10];
     int top;
 
 
