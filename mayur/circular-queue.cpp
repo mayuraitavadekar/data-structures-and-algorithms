@@ -36,15 +36,14 @@ class circular_queue {
             rear++;
             arr[rear] = element;
         }
-
+        /*
         else if(front !=0 && rear == q_size-1) {
             rear = 0;
             arr[rear] = element;
         }
-        
+        */
         else {
-            rear++;
-            arr[rear] = element;
+            arr[(++rear%(q_size))] = element;
         }
 
         cout<<element<<" added."<<endl;
