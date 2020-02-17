@@ -11,6 +11,7 @@ Node *newnode = NULL;
 Node *head = NULL;
 Node *curr = NULL;
 Node *previ = NULL;
+Node *temp = NULL;
 int count = 0;
 
 // insert node[at end]
@@ -187,7 +188,7 @@ void search(int element) {
     int flag = 0;
     int loc = 0;
     if(element == head->data) {
-        cout<<"found"<<endl;
+        cout<<"element found at location : "<<loc+1<<endl;
     }
 
     else {
@@ -198,9 +199,22 @@ void search(int element) {
                 flag=1;
                 break;
             }
+
+            if(curr->next == NULL) {
+                if(curr->data == element) {
+                    flag=1;
+                    break;
+                }
+            }
             loc++;
             curr = curr->next;
 
+        }
+
+        if(curr->next == NULL) {
+            if(curr->data == element) {
+                flag=1;
+            }
         }
 
         if(flag==1) {
@@ -224,6 +238,43 @@ void display() {
     cout<<curr->data<<endl;
 }
 
+// sort linked list
+
+void sort() {
+
+    for(int i=0;i<count;i++) {
+
+        previ = head;
+        curr = head;
+        curr = curr->next;
+
+        while(curr->next != NULL) {
+
+            if(curr->data < previ->data) {
+                temp = new Node();
+                temp->data = curr->data;
+                curr->data = previ->data;
+                previ->data = temp->data;
+            }
+            curr = curr->next;
+            previ = previ->next;
+        }
+
+        if(curr->next == NULL) {
+            if(curr->data < previ->data) {
+                temp = new Node();
+                temp->data = curr->data;
+                curr->data = previ->data;
+                previ->data = temp->data;
+            }
+        }
+    }
+
+    cout<<"sorting done."<<endl;
+
+    display();
+}
+
 // driver code
 int main () {
 
@@ -241,6 +292,7 @@ int main () {
         cout<<"6. remove node[at pos]"<<endl;
         cout<<"7. display node : "<<endl;
         cout<<"8. search node : "<<endl;
+        //cout<<"9. sort : "<<endl;
         cout<<"0. EXIT : "<<endl;
         
         cin>>choice;
@@ -286,6 +338,10 @@ int main () {
             cout<<"enter element : "<<endl;
             cin>>element;
             search(element);
+            break;
+
+            case 9 : 
+            sort();
             break;
         }
 
