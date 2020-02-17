@@ -1,0 +1,39 @@
+// count is total of number of nodes in the linked list
+
+Node *temp1 = NULL;
+Node *temp2 = NULL;
+
+Node *newnode = NULL;
+
+for(int i=0;i<count;i++) {
+    
+    if(temp1->data < temp2->data) {
+            if(newnode == NULL) {
+                newnode = new Node();
+            }
+            newnode->data = temp1->data;
+            temp1 = temp1->next;
+    }
+    
+    if(temp2->data < temp1->data) {
+            if(newnode == NULL) {
+                newnode = new Node();
+            }
+            newnode->data = temp2->data;
+            temp2 = temp2->next;
+    }
+    
+    if(temp1->next == NULL || temp2->next == NULL) {
+            if(temp1->data < temp2->data) {
+                  newnode->data = temp1->data;
+            }
+            else {
+                  newnode->data = temp2->data;
+            }
+    }
+}
+    
+    
+    
+    
+  
