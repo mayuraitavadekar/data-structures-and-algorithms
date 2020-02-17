@@ -1,3 +1,7 @@
+#include<iostream>
+
+using namespace std;
+
 typedef struct Node {
 	
 	int data;
@@ -5,70 +9,144 @@ typedef struct Node {
 	
 } Node;
 
-Node *temp1 = head1; // head1 is head of first linked list.
-Node *temp2 = head2; // head2 is head of second linked list.
 
-Node *head = NULL; // head is head of main merging linekd list. 
-Node *newnode = NULL; // newnode pointer to create newnode.
-Node *curr = NULL; // to traverse.
+Node *head1 = NULL;
+Node *head2 = NULL;
 
-while(true) {
+Node *head = NULL;
+Node *newnode = NULL;
+Node *curr = NULL;
+Node *temp = NULL;
 
-	newnode = new Node();
+int d = 0;
+
+void createLinkedList() {
 	
-	if(temp1->data < temp2->data) {
-		newnode->data = temp1->data;
-		if(head == NULL) {
-			head = newnode;
+	for(int i=0;i<2;i++) {
+
+		d=d+10;
+		newnode = new Node();
+		newnode->data = d;
+	
+		if(head1 == NULL) {
+			head1 = newnode;
 		}
 		else {
-			curr = head;
-			while(curr->next!=NULL) {
-			
+			curr = head1;
+			while(curr->next !=NULL) {
 				curr = curr->next;
 			}
 			curr->next = newnode;
 		}
-		
-		temp1 = temp1->next;
-		continue;
-		
+
 	}
-	
-	if(temp2->data < temp1->data) {
-		newnode->data = temp2->data;
-		if(head == NULL) {
-			head = newnode;
+
+	cout<<"first list created."<<endl;
+
+	d = -5;
+
+	for(int i=0;i<3;i++) {
+		
+		d = d+10;
+		newnode = new Node();
+		newnode->data = d+10;
+
+		if(head2 == NULL) {
+			head2 = newnode;
 		}
 		else {
-			curr = head;
-			while(curr->next!=NULL) {
-				curr =  curr->next;
+			curr = head2;
+			while(curr->next !=NULL) {
+				curr = curr->next;
 			}
 			curr->next = newnode;
 		}
-		temp2 = temp2->next;
-		continue;
 	}
-	
-	if(temp1 == NULL || temp2 == NULL) {
-		break;
-	}
-	
+
+	cout<<"second list created."<<endl;
 }
 
-if(temp1 == NULL) {
-	curr = head;
-	while(curr->next!=NULL) {
-		curr = curr->next;
+void mergeList() {
+	
+	Node *temp1;
+	Node *temp2;
+	
+	temp1 = head1;
+	temp2 = head2;
+	
+	while(temp1!=NULL && temp2!=NULL) {
+		
+		newnode = new Node();
+		
+		if(temp1->data < temp2->data) {
+			newnode->data = temp1->data;
+			if(head == NULL) {
+				head = newnode;
+			}
+			else {
+				curr = head;
+				while(curr->next!=NULL) {
+					curr = curr->next;
+				}
+				curr->next = newnode;
+			}	
+			temp1 = temp1->next;
+		}
+		
+		else {
+			newnode->data = temp2->data;
+			if(head == NULL) {
+				head = newnode;
+			}
+			else {
+				curr = head;
+				while(curr->next!=NULL) {
+					curr =  curr->next;
+				}
+				curr->next = newnode;
+			}
+			temp2 = temp2->next;
+		}
 	}
-	curr->next = temp2;
+
+	if(temp1 == NULL) {
+		curr = head;
+		while(curr->next!=NULL) {
+			curr = curr->next;
+		}
+		curr->next = temp2;
+	}
+
+	if(temp2 == NULL) {	
+		curr = head;
+		while(curr->next!=NULL) {
+			curr = curr->next;
+		}
+		curr->next = temp1;
+	}
+
 }
 
-if(temp2 == NULL) {	
+void display() {
+
 	curr = head;
 	while(curr->next!=NULL) {
+		cout<<curr->data<<endl;
 		curr = curr->next;
 	}
-	curr->next = temp1;
+	cout<<curr->data<<endl;
+
+}
+
+// driver code.
+
+int main() {
+
+	cout<<"create two linked list : "<<endl;
+	createLinkedList();
+	
+	cout<<"calling merge"<<endl;
+	mergeList();
+	cout<<"calling display"<<endl;
+	display();
 }
