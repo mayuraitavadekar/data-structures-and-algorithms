@@ -29,7 +29,7 @@ const get_data = () => {
         }
     }
 
-    console.log("enter matrix 1 : ");
+    console.log("enter matrix 2 : ");
     for(var i=0;i<size;i++) {
         console.log(`enter the ${i} row : `);
         for(var j=0;j<size;j++) {
