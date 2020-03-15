@@ -104,10 +104,10 @@ void searchKey(Node* &curr, int key, Node* &parent)
 
 int deleteNode(int d) {
 
-    int flag = 0;
-		Node* previ = nullptr;
- 		Node* curr = root;
- 		searchKey(curr, d, previ);
+    	int flag = 0;
+	Node* previ = nullptr;
+ 	Node* curr = root;
+	searchKey(curr, d, previ);
         Node *temp1 = NULL;
         Node *temp2 = NULL;
 
