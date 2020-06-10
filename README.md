@@ -40,6 +40,6 @@ It contains following data structures:
 
 ## Recent Updates
 
-We started uploading C++,Java and JavaScript codes, regularly.  
+I'm busy in working on my own startup. So not able to update the DS&ALGO codes till November 2020.
 
 ## Happy Coding 😊
