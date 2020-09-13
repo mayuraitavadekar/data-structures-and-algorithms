@@ -22,6 +22,39 @@ If not, install.
 
 Also Check g++ compiler is installed on your machine or not. It's inbuilt in linux/mac machines. 
 
+## Syllabus to be completed in DS&ALGO
+
+### basics of sorting
+
+- [] asymptotic notations, time and space complexity
+- [] insertion sort
+- [] recursion/recursive programming
+- [] bubble sort
+- [] quick sort
+- [] selection sort
+- [] linear time sorting
+
+### data structures
+
+- [] arrays ( 1d, 2d, dynamic) and amortized time
+- [] linked list (single, double, circular)
+- [] array vs linked list
+- [] stack and stack operations
+- [] queues ( linear, circular)
+- [] linear search
+- [] binary search
+- [] binary search tree (using arrays, using pointers)
+- [] operatiosn on BST (search, insert, min, max)
+- [] traversals on BST (inorder, preorder, postorder)
+- [] randomized BST
+- [] trees (logical structure, implemenation, traversals, types of binary trees- leaf, node, depth)
+- [] application of trees (backtracking for sodoku, backtracking for eight queens, websites DOM
+- [] heap sort
+- [] balanced trees: AVL trees
+- [] hashing
+- [] graph
+- [] dyanamic programming
+- [] greedy algorithms
 
 ## About This Repository
 
