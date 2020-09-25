@@ -7,6 +7,8 @@ void bubble_sort(int arr[], int n)
 {
 
     int temp;
+    int total_swappings = 0; // in worrst case - (n-1) + (n-2) + (n-3) + ...... + 2  + 1
+    bool at_least_one_time_swapped_or_not = false;
 
     for (int i = 0; i < n - 1; i++)
     {
@@ -17,9 +19,21 @@ void bubble_sort(int arr[], int n)
                 temp = arr[j];
                 arr[j] = arr[j + 1];
                 arr[j + 1] = temp;
+                total_swappings++;
+                at_least_one_time_swapped_or_not = true;
             }
         }
+
+        if (at_least_one_time_swapped_or_not != true)
+        {
+            // it is best case. otherwise, in the first iteration there has to been at least one swapping.
+
+            cout << "elements are already sorted." << endl;
+            break;
+        }
     }
+
+    cout << "total swappings : " << total_swappings << endl;
 }
 
 int main()
