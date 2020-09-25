@@ -1,6 +1,7 @@
 # Data Structures & Algorithms using JavaScript/C++/Java
 
 This repository contains computer programs related to data structures and algorithms written JavaScript/Node.js/C++.
+Please hit star button on top to make it more accessible. Go Ahead.
 
 ## Installation
 
@@ -26,11 +27,11 @@ Also Check g++ compiler is installed on your machine or not. It's inbuilt in lin
 
 ### basics of sorting
 
-- [] asymptotic notations, time and space complexity
-- [] insertion sort
-- [] recursion/recursive programming
-- [] bubble sort
-- [] quick sort
+- [x] asymptotic notations, time and space complexity
+- [x] insertion sort
+- [x] recursion/recursive programming
+- [x] bubble sort
+- [x] quick sort
 - [] selection sort
 - [] linear time sorting
 
