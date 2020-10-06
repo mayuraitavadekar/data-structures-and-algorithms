@@ -18,7 +18,7 @@ void insert(int arr[], int n)
     arr[i] = temp;
 }
 
-void Delete(int arr[], int n)
+void Delete(int arr[], int n) // adjustment is everything in delete
 {
 
     int x = arr[1]; // put first element in x
