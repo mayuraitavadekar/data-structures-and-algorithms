@@ -53,6 +53,22 @@ Also Check g++ compiler is installed on your machine or not. It's inbuilt in lin
 - [x] [Basic operations of tables](https://www.w3schools.com/sql/default.asp)
 - [x] [Natural JOIN](https://www.youtube.com/watch?v=jRxEjmjIIFs) + [solved examples on Natural JOIN](https://www.w3resource.com/sql-exercises/sql-joins-exercises.php)
 
+### OOPs Interview Questions
+
+- Basic OOPs Questions
+
+  - [x] [Top interview questions on OOPS](https://medium.com/edureka/oops-interview-questions-621fc922cdf4)
+
+- Polymorphism
+
+  - [x] [Runtime polymorphism/method overriding/dynamic polymorphism](https://www.youtube.com/watch?v=W2pTtlNaa6s)
+  - [x] [Compile time polymorphism/method overloading/static polymorphism](https://www.youtube.com/watch?v=_iz6cjXlJfw)
+
+- Data Abstraction
+  - [x] [Abstract keyword and abstract class (mainly used for data abstraction)](https://www.youtube.com/watch?v=7nCQ8JPXZEo)
+  - [x] [Abstract methods](https://www.youtube.com/watch?v=_MeavQdZU_g)
+  - [x] [Interface in Java](https://www.youtube.com/results?search_query=smartherd+java+interface)
+
 ## About This Repository
 
 The JavaScript is very light weight, high level, general purpose programming language. It is multi paradigm language, that is, we can use JavaScript in functional, procedural and/or Object Oriented way.
