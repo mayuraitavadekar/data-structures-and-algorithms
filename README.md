@@ -61,12 +61,13 @@ Also Check g++ compiler is installed on your machine or not. It's inbuilt in lin
 
 - Polymorphism
 
-  - [x] [Runtime polymorphism/method overriding/dynamic polymorphism](https://www.youtube.com/watch?v=W2pTtlNaa6s)
-  - [x] [Compile time polymorphism/method overloading/static polymorphism](https://www.youtube.com/watch?v=_iz6cjXlJfw)
+  - [x] [Runtime polymorphism/method overriding/dynamic polymorphism in JAVA](https://www.youtube.com/watch?v=W2pTtlNaa6s)
+  - [x] [Compile time polymorphism/method overloading/static polymorphism in jAVA](https://www.youtube.com/watch?v=_iz6cjXlJfw)
+  - [x] [Runtime polymorphism/method overriding/Virtual functions used to prevent early binding in C++](https://www.youtube.com/watch?v=cUCy2ENJjW8)
 
 - Data Abstraction
-  - [x] [Abstract keyword and abstract class (mainly used for data abstraction)](https://www.youtube.com/watch?v=7nCQ8JPXZEo)
-  - [x] [Abstract methods](https://www.youtube.com/watch?v=_MeavQdZU_g)
+  - [x] [Abstract keyword and abstract class (mainly used for data abstraction) in JAVA](https://www.youtube.com/watch?v=7nCQ8JPXZEo)
+  - [x] [Abstract methods in JAVA](https://www.youtube.com/watch?v=_MeavQdZU_g)
   - [x] [Interface in Java](https://www.youtube.com/results?search_query=smartherd+java+interface)
 
 ## About This Repository
