@@ -41,12 +41,17 @@ Also Check g++ compiler is installed on your machine or not. It's inbuilt in lin
 
 ### data structures
 
-- Heap
+- heap
+
   - [x] inserting element into heap
   - [x] deleting element from heap
   - [x] creation of heap
   - [x] traditional creation + deletion -> heapsort
   - [x] heapify + deletion -> heapsort
+
+- graph
+  - [x] basic types of graphs
+  - [x] BFS graph traversal
 
 ### MySQL
 
