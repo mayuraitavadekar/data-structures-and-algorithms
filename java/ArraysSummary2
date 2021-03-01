@@ -7,7 +7,7 @@
 import java.util.Arrays;
 import java.util.*;
 
-public class Main
+public class ArraySummary2
 {
     public static int[] arr = {4,8,10,15,21,24,27,56,2,11,45,89,4,22,36,54,85};
 
@@ -52,7 +52,7 @@ public class Main
 
     public static void main(String[] args) {
         
-        Main obj = new Main();
+        ArraySummary2 obj = new ArraySummary2();
         System.out.println("MIN = " + obj.min());
         System.out.println("MAX = " + obj.max());
         System.out.println("sum = " + obj.sum());
