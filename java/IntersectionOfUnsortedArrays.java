@@ -5,7 +5,7 @@ intersection of two arrays when arrays are not sorted
 *******************************************************************************/
 public class Main
 {
-    public static int[] A = {3,5,10,4,6};
+    	public static int[] A = {3,5,10,4,6};
 	public static int[] B = {12,4,7,2,5};
 	public static int[] C = new int[A.length + B.length];
     
