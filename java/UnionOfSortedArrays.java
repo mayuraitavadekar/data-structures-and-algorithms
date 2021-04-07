@@ -35,6 +35,7 @@ public class Main
 	    int k=0;
 	    
 	    while(i<A.length && j<B.length) {
+		// main step: if same elements then move i and j both
 	        if(A[i] == B[j]) {
 	            C[k++] = A[i++];
 	            j++;
