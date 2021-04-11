@@ -77,12 +77,11 @@ Also Check g++ compiler is installed on your machine or not. It's inbuilt in lin
 
 ## About This Repository
 
-The JavaScript is very light weight, high level, general purpose programming language. It is multi paradigm language, that is, we can use JavaScript in functional, procedural and/or Object Oriented way.
-
-Though it is not recommended to write data structures programs using JavaScript, I have written these programs for my personal understanding and deeper clarity about 1) Programming in Js 2) Developing data structures.
+1. JavaScript programs are written for personal understanding of language. I do not recommend anyone to write data structures in JavaScript.
+2. I mostly write algorithms in Java. I am currently updating Java codes. 
 
 ## Recent Updates
 
-I'm busy in working on my own startup. So not able to update the DS&ALGO codes till November 2020.
+This is active project.
 
 ## Happy Coding 😊
