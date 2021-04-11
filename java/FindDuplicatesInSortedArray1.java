@@ -13,8 +13,8 @@ public class Main
     public static void main(String[] args) {
 		int lastDuplicate = 0;
 		
-		for(int i=0;i<A.length;i++) {
-		    if(i < A.length - 1 && A[i] == A[i+1] && A[i] != lastDuplicate) {
+		for(int i=0;i<A.length-1;i++) {
+		    if(A[i] == A[i+1] && A[i] != lastDuplicate) {
 		        System.out.printf("%d ", A[i]);
 		        lastDuplicate = A[i];
 		    }
