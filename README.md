@@ -82,6 +82,6 @@ Also Check g++ compiler is installed on your machine or not. It's inbuilt in lin
 
 ## Recent Updates
 
-This is active project.
+This is not an active project, at least for now :|
 
 ## Happy Coding 😊
