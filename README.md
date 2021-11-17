@@ -41,6 +41,8 @@ Also Check g++ compiler is installed on your machine or not. It's inbuilt in lin
 
 ### data structures
 
+- strings
+
 - heap
 
   - [x] inserting element into heap
