@@ -35,6 +35,46 @@ class LinkList {
         }
     }
     
+    public void reverse(Node current)
+    {
+        if(head == null)
+        {
+            System.out.println("linklist is empty");
+            return;
+        }
+        
+        // breaking condition
+        if(current.next == null)
+        {
+            System.out.print(current.data + " ");
+            return;
+        }
+        reverse(current.next);
+        System.out.print(current.data + " ");
+    }
+    
+    public void deleteFromStart()
+    {
+        if(head == null)
+        {
+            System.out.println("linklist is empty");
+            return;
+        }
+        
+        else
+        {
+            if(head == tail)
+            {
+                // only one node is available
+                head = tail = null;
+            }
+            else
+            {
+                head = head.next;
+            }
+        }
+    }
+    
     public void display()
     {
         Node current = head;
@@ -62,6 +102,12 @@ class LinkList {
         obj.addNode(30);
         obj.display();
         obj.addNode(40);
+        obj.display();
+        
+        System.out.println("print linklist in reverse order");
+        obj.reverse(obj.head);
+        System.out.println("delete from start");
+        obj.deleteFromStart();
         obj.display();
     }
 }
