@@ -62,7 +62,6 @@ public class InfixToPostfix {
 				// if stack is empty or precedence of current is greater then push into stack
                 		stack.push(c);
 			}
-			
 		}
 		
 		// finally whatever in the stack add to result
