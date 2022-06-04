@@ -56,16 +56,22 @@ public class InfixToPostfix {
 			else 
 			{
 				while(!stack.isEmpty() && precedence(c) <= precedence(stack.peek()))
-                    result += stack.pop();
-                stack.push(c);
+				{
+                    			result += stack.pop();
+				}
+				// if stack is empty or precedence of current is greater then push into stack
+                		stack.push(c);
 			}
 			
 		}
 		
+		// finally whatever in the stack add to result
 		while (!stack.isEmpty())
-            result += stack.pop();
+		{	
+            		result += stack.pop();
+		}
 
-        return result;
+        	return result;
 	}
 	
 	public static void main(String[] args)
@@ -73,6 +79,4 @@ public class InfixToPostfix {
 		String exp = "a+b*c-d/e";
 		System.out.println(infixToPostfix(exp));
 	}
-	
-	
 }
