@@ -69,8 +69,58 @@ public class BuildGraph {
 		}
 	}
 	
+	public void bfs(int source)
+	{
+		// to store traversal; not to be used in problems
+		List<Integer> arrlist = new ArrayList<Integer>();
+		
+		// for bfs we need following data structures
+		Queue<Integer> q = new LinkedList<>();
+		int[] visited = new int[map.keySet().size()]; // you can also take map<Integer, Boolean> instead of this
+		
+		q.add(source);
+		visited[source] = 1;
+		arrlist.add(source);
+		
+		
+		while(!q.isEmpty())
+		{
+			int v = q.poll();
+			// get neighbours
+			List<Integer> neighbours = map.get(v);
+			
+			for(int i=0;i<neighbours.size();i++)
+			{
+				int neighbour = neighbours.get(i);
+				if(visited[neighbour] ==  1)
+				{
+					continue;
+				}
+				
+				arrlist.add(neighbour);
+				visited[neighbour] = 1;
+				q.add(neighbour);
+			}
+		}
+		
+		System.out.println(arrlist);
+	}
+	
 	public static void main(String[] args)
 	{
+		
+		/*
+		 *  0------1
+		 *  |	   |\
+		 *  |	   | \
+		 *  |      |  4
+		 *  |	   | /
+		 *  |      |/
+		 *  2------3
+		 * 
+		 * 
+		 */
+		
 		BuildGraph obj = new BuildGraph();
 		
 		obj.addEdge(0, 1, true);
@@ -92,5 +142,7 @@ public class BuildGraph {
 		// has edge
 		obj.hasEdge(3, 0);
 		
+		// bfs traversal from source
+		obj.bfs(0);
 	}
 }
