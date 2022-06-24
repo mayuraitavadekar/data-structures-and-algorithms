@@ -6,6 +6,11 @@ public class BuildGraph {
 	
 	public static HashMap<Integer, List<Integer>> map = new HashMap<>();
 	
+	///////////// DFS variables ///////////////
+	public static Map<Integer, Boolean> visited = new HashMap<>();
+	public static ArrayList<Integer> arrlist = new ArrayList<>();
+	//////////////////////////////////////////
+	
 	public void addEdge(int u, int v, boolean bidirectional)
 	{
 		if(!map.containsKey(u))
@@ -106,6 +111,23 @@ public class BuildGraph {
 		System.out.println(arrlist);
 	}
 	
+	public void dfs(int v, Map<Integer, Boolean> visited)
+	{
+		
+		visited.put(v, true);
+		arrlist.add(v);
+		
+		Iterator<Integer> i = map.get(v).iterator();
+		while(i.hasNext())
+		{
+			int node = i.next();
+			if(visited.get(node) != true)
+			{
+				dfs(node, visited);
+			}
+		}
+	}
+	
 	public static void main(String[] args)
 	{
 		
@@ -142,7 +164,13 @@ public class BuildGraph {
 		// has edge
 		obj.hasEdge(3, 0);
 		
-		// bfs traversal from source
-		obj.bfs(0);
+		// prepare visited map first
+		for(int i=0;i<map.keySet().size();i++)
+		{
+			visited.put(i, false); // all false initially
+		}
+		obj.dfs(0, visited);		
+		// solution of dfs
+		System.out.println(arrlist);
 	}
 }
