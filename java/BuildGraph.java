@@ -1,3 +1,9 @@
+/*
+	
+	use algorithms for undirected graphs only.
+	
+*/
+
 package Leetcode;
 
 import java.util.*;
