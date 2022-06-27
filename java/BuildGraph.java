@@ -9,8 +9,11 @@ public class BuildGraph {
 	///////////// DFS variables ///////////////
 	public static Map<Integer, Boolean> visited = new HashMap<>();
 	public static ArrayList<Integer> arrlist = new ArrayList<>();
+	public static Map<Integer, Integer> parent = new HashMap<Integer, Integer>();
 	//////////////////////////////////////////
-	
+	///////////// cycle detection variables //
+	public static Map<Integer, Integer> parent = new HashMap<Integer, Integer>();
+	//////////////////////////////////////////
 	public void addEdge(int u, int v, boolean bidirectional)
 	{
 		if(!map.containsKey(u))
@@ -111,13 +114,12 @@ public class BuildGraph {
 		System.out.println(arrlist);
 	}
 	
-	public void dfs(int v, Map<Integer, Boolean> visited)
+	public void dfs(int source, Map<Integer, Boolean> visited)
 	{
+		visited.put(source, true);
+		arrlist.add(source);
 		
-		visited.put(v, true);
-		arrlist.add(v);
-		
-		Iterator<Integer> i = map.get(v).iterator();
+		Iterator<Integer> i = map.get(source).iterator();
 		while(i.hasNext())
 		{
 			int node = i.next();
@@ -126,6 +128,74 @@ public class BuildGraph {
 				dfs(node, visited);
 			}
 		}
+	}
+	
+	public boolean cycleDetectionWithBFS(int source)
+	{
+		Queue<Integer> q = new LinkedList<>();
+		Map<Integer, Integer> parent = new HashMap<Integer, Integer>(); // {child -> parent}
+		Map<Integer, Boolean> visited = new HashMap<>();
+		// mark all vertices false
+		for(int i=0;i<map.keySet().size();i++)
+		{
+			visited.put(i, false); 
+		}
+		
+		int vertex = source;
+		parent.put(source, -1);
+		q.add(vertex);
+		visited.put(vertex, true);
+		
+		while(!q.isEmpty())
+		{
+			int node = q.poll();
+			List<Integer> neighbours = map.get(node);
+			
+			for(int i=0;i<neighbours.size();i++)
+			{
+				int neighbour = neighbours.get(i);
+				
+				// if neighbour is parent and if neighbour is child of node
+				if(visited.get(neighbour) == true && neighbour == parent.get(node))
+				{
+					return true;
+				}
+				
+				else if(visited.get(neighbour) == false)
+				{
+					visited.put(neighbour, true);
+					q.add(neighbour);
+					parent.put(neighbour, node);
+				}
+			}
+		}
+		
+		return false;
+	}
+	
+	public boolean cycleDetectionWithDFS(int source, Map<Integer, Boolean> visited,int parent)
+	{
+		visited.put(source, true);
+	
+		Iterator<Integer> i = map.get(source).iterator();
+		while(i.hasNext())
+		{
+			int node = i.next();
+			if(visited.get(node) != true)
+			{	
+				boolean cycleDetected = cycleDetectionWithDFS(node, visited, source);
+				if(cycleDetected == true)
+				{
+					return true;
+				}
+			}
+			else if(visited.get(node) == true && node != source)
+			{
+				return true;
+			}
+		}
+		
+		return false;
 	}
 	
 	public static void main(String[] args)
@@ -149,8 +219,8 @@ public class BuildGraph {
 		obj.addEdge(0, 2, true);
 		obj.addEdge(2, 3, true);
 		obj.addEdge(3, 1, true);
+		obj.addEdge(3, 4, true);
 		obj.addEdge(4, 1, true);
-		obj.addEdge(4, 2, true);
 		
 		// get vertex count
 		obj.getVertexCount();
@@ -164,6 +234,9 @@ public class BuildGraph {
 		// has edge
 		obj.hasEdge(3, 0);
 		
+		// BFS traversal
+		obj.bfs(0);
+		
 		// prepare visited map first
 		for(int i=0;i<map.keySet().size();i++)
 		{
@@ -172,5 +245,22 @@ public class BuildGraph {
 		obj.dfs(0, visited);		
 		// solution of dfs
 		System.out.println(arrlist);
+		
+		// cycle detection using BFS
+		System.out.println("======= CYCLE DETECTION USING BFS======");
+		boolean res = obj.cycleDetectionWithBFS(0);
+		if(res == true) System.out.println("yes cycle is present");
+		else System.out.println("no cycle is not present");
+		
+		// cycle detection using DFS
+		System.out.println("======= CYCLE DETECTION USING DFS======");
+		for(int i=0;i<map.keySet().size();i++)
+		{
+			visited.put(i, false); // all false initially
+		}
+		
+		res = obj.cycleDetectionWithDFS(0, visited, -1);
+		if(res == true) System.out.println("yes cycle is present");
+		else System.out.println("no cycle is not present");
 	}
 }
