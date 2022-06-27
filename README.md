@@ -27,33 +27,7 @@ If not, install.
 
 Also Check g++ compiler is installed on your machine or not. It's inbuilt in linux/mac machines.
 
-## Syllabus to be completed in DS&ALGO
-
-### Introduction
-
-- [x] model of computers
-- [x] main memory structure - heap memory vs stack memory
-- [x] physical data structures - Arrays - Linked Lists
-- [x] logical data structures - stacks (linear) - queues (linear) - trees (non-linear) - graphs (non-linear) - hash tables (tabular)
-- [x] asysmptotic notations - Big O - Big omega - Big theta
-- [x] difference between best case complexity and worst case complexity
-- [x] Analysis of simple programs by time and space complexity
-
-### data structures
-
-- strings
-
-- heap
-
-  - [x] inserting element into heap
-  - [x] deleting element from heap
-  - [x] creation of heap
-  - [x] traditional creation + deletion -> heapsort
-  - [x] heapify + deletion -> heapsort
-
-- graph
-  - [x] basic types of graphs
-  - [x] BFS graph traversal
+## Some resources
 
 ### MySQL
 
