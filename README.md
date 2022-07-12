@@ -51,6 +51,28 @@ Also Check g++ compiler is installed on your machine or not. It's inbuilt in lin
   - [x] [Abstract methods in JAVA](https://www.youtube.com/watch?v=_MeavQdZU_g)
   - [x] [Interface in Java](https://www.youtube.com/results?search_query=smartherd+java+interface)
 
+- Principles of recursion
+  1. always check if the input is null or not
+
+  2. or asks multiple questions at a time. If result of first question is true, it stops asking question and returns true. otherwise it 
+
+  3. if asks question over some conditions. If those conditions are false. Then following questions are asked in else.
+
+  4. always change atleast one argument while recurring. It must be changed to be closer to termination. The changing argument must be tested in termination condition.
+
+  5.	recursin on		base case
+	    array			size
+      string			string length
+      number			num == 0 or num == 1
+      tree			root == null, root.left == null, root.right == null
+    
+  6. simplify only after function is correct
+  7. Recur on the subparts that are of the same nature:
+	  • On the sublists of a list.
+	  • On the substrings of string
+    
+  8. Abstract common pattern with new function
+
 ## About This Repository
 
 1. JavaScript programs are written for personal understanding of language. I do not recommend anyone to write data structures in JavaScript.
