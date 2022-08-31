@@ -162,7 +162,7 @@ public class BuildGraph {
 				int neighbour = neighbours.get(i);
 				
 				// if neighbour is parent and if neighbour is child of node
-				if(visited.get(neighbour) == true && neighbour == parent.get(node))
+				if(visited.get(neighbour) == true && neighbour != parent.get(node))
 				{
 					return true;
 				}
