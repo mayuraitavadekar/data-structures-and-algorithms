@@ -31,6 +31,7 @@ Also Check g++ compiler is installed on your machine or not. It's inbuilt in lin
 
 ### MySQL
 - [x] https://rpubs.com/cliex159/IntroductiontoSQL
+- [X] https://rpubs.com/cliex159/JoiningDatainSQL
 - [x] [Basic operations of tables](https://www.w3schools.com/sql/default.asp)
 - [x] [Natural JOIN](https://www.youtube.com/watch?v=jRxEjmjIIFs) + [solved examples on Natural JOIN](https://www.w3resource.com/sql-exercises/sql-joins-exercises.php)
 
