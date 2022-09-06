@@ -36,6 +36,9 @@ Also Check g++ compiler is installed on your machine or not. It's inbuilt in lin
 
 ### OOPs Interview Questions
 
+- MYSQL
+  - [x] https://rpubs.com/cliex159/IntroductiontoSQL
+
 - Basic OOPs Questions
 
   - [x] [Top interview questions on OOPS](https://medium.com/edureka/oops-interview-questions-621fc922cdf4)
