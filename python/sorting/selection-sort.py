@@ -10,5 +10,3 @@ for i in range(len(arr)):
     arr[i], arr[k] = arr[k], arr[i]
     
 print(arr)
-
-
