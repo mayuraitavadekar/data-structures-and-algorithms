@@ -13,7 +13,7 @@ def dfsOfGraph(self, V, adj):
         res.append(node)
         
         # get the neighbors
-        neighbours = adj[node]
+        neighbors = adj[node]
         
         for neighbor in neighbors:
             dfs(neighbor)
