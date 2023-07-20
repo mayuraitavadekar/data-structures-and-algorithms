@@ -12,11 +12,11 @@ def dfsOfGraph(self, V, adj):
         visited.add(node)
         res.append(node)
         
-        # get the neighbouts
+        # get the neighbors
         neighbours = adj[node]
         
-        for neighbour in neighbours:
-            dfs(neighbour)
+        for neighbor in neighbors:
+            dfs(neighbor)
         
     
     for i in range(V):
