@@ -30,6 +30,7 @@ Also Check g++ compiler is installed on your machine or not. It's inbuilt in lin
 ## Some resources
 
 ### MySQL
+- [x] mental models for SQL JOIN: https://dev.to/a89529294/mental-model-for-sql-joins-431j
 - [x] https://rpubs.com/cliex159/IntroductiontoSQL
 - [X] https://rpubs.com/cliex159/JoiningDatainSQL
 - [x] [Basic operations of tables](https://www.w3schools.com/sql/default.asp)
